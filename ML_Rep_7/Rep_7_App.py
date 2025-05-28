@@ -62,14 +62,15 @@ if uploaded_walk and uploaded_run and uploaded_stop:
     # 시각화
     st.subheader("📈 Feature Pairplot")
     fig = sns.pairplot(df[feature_cols + ['label']], hue='label', diag_kind="hist")
-    fig.fig.set_size_inches(3, 2)
+    fig.fig.set_size_inches(2.5, 2)
     st.pyplot(fig)
 
     # 축 간 관계 시각화
     for (x, y) in [(0, 1), (0, 2), (1, 2)]:
-        fig, ax = plt.subplots(figsize=(3, 2))
+        fig, ax = plt.subplots(figsize=(2.5, 2))
         sns.scatterplot(data=df, x=feature_cols[x], y=feature_cols[y], hue='label', ax=ax)
-        ax.set_title(f"{feature_cols[x]} vs {feature_cols[y]}")
+        ax.set_title(f"{feature_cols[x]} vs {feature_cols[y]}", fontsize=10)
+        ax.tick_params(labelsize=8)
         st.pyplot(fig)
 
     # 학습용 데이터 구성
@@ -137,7 +138,7 @@ if uploaded_walk and uploaded_run and uploaded_stop:
     st.text(classification_report(y_test, y_pred, target_names=le.classes_))
 
     cm = confusion_matrix(y_test, y_pred)
-    fig_cm, ax = plt.subplots(figsize=(3, 2))
+    fig_cm, ax = plt.subplots(figsize=(2.5, 2))
     sns.heatmap(cm, annot=True, fmt='d', xticklabels=le.classes_, yticklabels=le.classes_, ax=ax)
     ax.set_xlabel("Predicted")
     ax.set_ylabel("True")
