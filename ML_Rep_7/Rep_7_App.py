@@ -29,11 +29,11 @@ uploaded_stop = st.file_uploader("정지 데이터 업로드", type="csv")
 
 if uploaded_walk and uploaded_run and uploaded_stop:
     # CSV 읽기
-    walk_df = pd.read_csv(uploaded_walk)
+    walk_df = pd.read_csv('D:\ML_git\ML\ML\ML_Rep_7\걷기데이터.csv')
     walk_df['label'] = 'walk'
-    run_df = pd.read_csv(uploaded_run)
+    run_df = pd.read_csv('D:\ML_git\ML\ML\ML_Rep_7\뛰기데이터.csv')
     run_df['label'] = 'run'
-    stop_df = pd.read_csv(uploaded_stop)
+    stop_df = pd.read_csv('D:\ML_git\ML\ML\ML_Rep_7\정지데이터.csv')
     stop_df['label'] = 'stop'
 
     # 병합

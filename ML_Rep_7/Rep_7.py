@@ -18,13 +18,13 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 # from xgboost import XGBClassifier  # 사용 시 주석 해제
 
 # 1. 데이터 불러오기 및 라벨 추가
-walk_df = pd.read_csv("걷기데이터.csv")
+walk_df = pd.read_csv("D:\ML_git\ML\ML\ML_Rep_7\걷기데이터.csv")
 walk_df["label"] = "walk"
 
-run_df = pd.read_csv("뛰기데이터.csv")
+run_df = pd.read_csv("D:\ML_git\ML\ML\ML_Rep_7\뛰기데이터.csv")
 run_df["label"] = "run"
 
-stop_df = pd.read_csv("정지데이터.csv")
+stop_df = pd.read_csv("D:\ML_git\ML\ML\ML_Rep_7\정지데이터.csv")
 stop_df["label"] = "stop"
 
 # 병합
