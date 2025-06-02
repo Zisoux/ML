@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-
-import streamlit as st
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -91,4 +86,3 @@ if user_input:
         st.markdown(f"- **📎 유사도 점수:** {row['유사도']:.3f}")
         st.markdown(f"- **🎯 최종 점수:** {row['최종점수']:.3f}")
         st.markdown("---")
-
