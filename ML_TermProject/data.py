@@ -1,3 +1,4 @@
+
 from googleapiclient.discovery import build
 import pandas as pd
 import time
@@ -31,8 +32,8 @@ category_keywords = {
 }
 
 
-# 채널 수집 함수
-def search_channels(keyword, max_results=25):
+# 채널 수집 함수 (한글 컬럼명 포함)
+def search_channels(keyword, max_results=35):
     search_response = youtube.search().list(
         part="snippet",
         type="channel",
@@ -52,7 +53,7 @@ def search_channels(keyword, max_results=25):
     for item in detail_response["items"]:
         channels.append({
             "카테고리": keyword,
-            "채널명": item["snippet"]["title"],
+            "채널명": item["snippet"].get("title", ""),
             "채널ID": item["id"],
             "설명": item["snippet"].get("description", ""),
             "구독자 수": item["statistics"].get("subscriberCount", "비공개"),
@@ -67,7 +68,7 @@ for category, keywords in category_keywords.items():
     for keyword in keywords:
         try:
             print(f"[{category}] '{keyword}' 검색 중...")
-            channels = search_channels(keyword, max_results=25)
+            channels = search_channels(keyword, max_results=35)
             all_channels.extend(channels)
             time.sleep(1)
         except Exception as e:
@@ -75,5 +76,5 @@ for category, keywords in category_keywords.items():
 
 # 중복 제거 및 저장
 df = pd.DataFrame(all_channels).drop_duplicates(subset=["채널ID"])
-df.to_csv("ML_TermProject/youtube_channels_500+.csv", index=False, encoding="utf-8-sig")
-print(f"✅ 총 {len(df)}개의 유튜브 채널 저장 완료 -> 'youtube_channels_500+.csv'")
+df.to_csv("youtube_channels_1000+.csv", index=False, encoding="utf-8-sig")
+print(f"✅ 총 {len(df)}개의 유튜브 채널 저장 완료 → 'youtube_channels_1000+.csv'")
