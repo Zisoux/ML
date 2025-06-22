@@ -26,7 +26,7 @@ st.markdown("""
         justify-content: center;
     }
     .block-container {
-        max-width: 800px;
+        max-width: 1000px;
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -201,11 +201,11 @@ def train_and_evaluate_model(X_train, X_test, y_train, y_test):
     # StratifiedKFold 사용하여 데이터가 불균형할 때도 비율을 유지하도록 설정
     cv = StratifiedKFold(n_splits=2, shuffle=True, random_state=42)  # cv=2로 변경
 
-    # 성능을 기록하기 위해 출력된 모델 성능을 저장
-    st.subheader("모델 성능 평가")
+    # 콘솔 출력
+    print("모델 성능 평가")
     
     for model_name, model in models.items():
-        st.write(f"Training {model_name}...")
+        print(f"Training {model_name}...")
         
         # 하이퍼파라미터 튜닝
         grid_search = GridSearchCV(model, param_grids[model_name], cv=cv, scoring='accuracy')  # StratifiedKFold로 교차 검증
@@ -230,12 +230,12 @@ def train_and_evaluate_model(X_train, X_test, y_train, y_test):
             'F1-Score': f1
         }
         
-        st.write(f"**{model_name} 성능**:")
-        st.write(f"Accuracy: {accuracy:.2f}")
-        st.write(f"Precision: {precision:.2f}")
-        st.write(f"Recall: {recall:.2f}")
-        st.write(f"F1-Score: {f1:.2f}")
-        st.markdown("---")
+        print(f"**{model_name} 성능**:")
+        print(f"Accuracy: {accuracy:.2f}")
+        print(f"Precision: {precision:.2f}")
+        print(f"Recall: {recall:.2f}")
+        print(f"F1-Score: {f1:.2f}")
+        print("-" * 30)
         
     return best_models, best_scores
 
@@ -293,4 +293,4 @@ best_models, best_scores = train_and_evaluate_model(X_train, X_test, y_train, y_
 best_model_name = max(best_scores, key=lambda x: best_scores[x]['Accuracy'])  # 정확도가 가장 높은 모델 선택
 best_model = best_models[best_model_name]
 
-st.write(f"**선택된 모델**: {best_model_name} - 정확도: {best_scores[best_model_name]['Accuracy']:.2f}")
+print(f"**선택된 모델**: {best_model_name} - 정확도: {best_scores[best_model_name]['Accuracy']:.2f}")
