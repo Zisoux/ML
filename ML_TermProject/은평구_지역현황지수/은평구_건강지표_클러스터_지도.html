@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_45db7985a6d348c5784a4c939fa829c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_45db7985a6d348c5784a4c939fa829c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_45db7985a6d348c5784a4c939fa829c4 = L.map(
+                "map_45db7985a6d348c5784a4c939fa829c4",
+                {
+                    center: [37.615, 126.92],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_95f65b13d9b0abc1273558937c76e622 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_45db7985a6d348c5784a4c939fa829c4);
+        
+    
+            var marker_cluster_515e0aea21c1cadfadfe14b1916863ff = L.markerClusterGroup(
+                {}
+            );
+            map_45db7985a6d348c5784a4c939fa829c4.addLayer(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var marker_f97f4ac85ce3c1d9db39335bbbc68b3e = L.marker(
+                [37.6134, 126.9093],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_3a0dd6816b10b3129d0b5950480e9faa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f97f4ac85ce3c1d9db39335bbbc68b3e.setIcon(icon_3a0dd6816b10b3129d0b5950480e9faa);
+        
+    
+        var popup_47ca2253c206fbf94af8dbdb357988e4 = L.popup({"maxWidth": 300});
+
+        
+            var html_683eea6d3a4c328e5a8d2b38d08cdfdc = $(`<div id="html_683eea6d3a4c328e5a8d2b38d08cdfdc" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>구산동</b><br>클러스터: <b>2</b><br>비만율 평균: 58.3%<br>고혈압 신규 이용률: 57.6%<br>당뇨병 신규 이용률: 52.1%</div></div>`)[0];
+            popup_47ca2253c206fbf94af8dbdb357988e4.setContent(html_683eea6d3a4c328e5a8d2b38d08cdfdc);
+        
+
+        marker_f97f4ac85ce3c1d9db39335bbbc68b3e.bindPopup(popup_47ca2253c206fbf94af8dbdb357988e4)
+        ;
+
+        
+    
+    
+            var marker_96ccf17d090854f7685f893d358fc227 = L.marker(
+                [37.6005, 126.9356],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_db997072b72dc658b1d1fd4768be519f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_96ccf17d090854f7685f893d358fc227.setIcon(icon_db997072b72dc658b1d1fd4768be519f);
+        
+    
+        var popup_3164d410c5491f63d1e8fc020560d63f = L.popup({"maxWidth": 300});
+
+        
+            var html_5aed8543adaf72ebb73c8b2fa450953e = $(`<div id="html_5aed8543adaf72ebb73c8b2fa450953e" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>녹번동</b><br>클러스터: <b>0</b><br>비만율 평균: 42.9%<br>고혈압 신규 이용률: 51.8%<br>당뇨병 신규 이용률: 42.7%</div></div>`)[0];
+            popup_3164d410c5491f63d1e8fc020560d63f.setContent(html_5aed8543adaf72ebb73c8b2fa450953e);
+        
+
+        marker_96ccf17d090854f7685f893d358fc227.bindPopup(popup_3164d410c5491f63d1e8fc020560d63f)
+        ;
+
+        
+    
+    
+            var marker_257b1ec33c8dff251b38ec9aa0eb6dcd = L.marker(
+                [37.6101, 126.9313],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_98dd6ea6cf5f9d6479edd26bba084726 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_257b1ec33c8dff251b38ec9aa0eb6dcd.setIcon(icon_98dd6ea6cf5f9d6479edd26bba084726);
+        
+    
+        var popup_eecbeeeabfaf30c40dd8813be8d84cbb = L.popup({"maxWidth": 300});
+
+        
+            var html_77618b4e96be47e2a178a6a021762f09 = $(`<div id="html_77618b4e96be47e2a178a6a021762f09" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>불광제1동</b><br>클러스터: <b>0</b><br>비만율 평균: 38.7%<br>고혈압 신규 이용률: 45.7%<br>당뇨병 신규 이용률: 44.2%</div></div>`)[0];
+            popup_eecbeeeabfaf30c40dd8813be8d84cbb.setContent(html_77618b4e96be47e2a178a6a021762f09);
+        
+
+        marker_257b1ec33c8dff251b38ec9aa0eb6dcd.bindPopup(popup_eecbeeeabfaf30c40dd8813be8d84cbb)
+        ;
+
+        
+    
+    
+            var marker_94d97507b21ffe6dfd7d857ec33c01f9 = L.marker(
+                [37.6098, 126.9272],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_0c72914a46467fcb0db47af49e09631d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_94d97507b21ffe6dfd7d857ec33c01f9.setIcon(icon_0c72914a46467fcb0db47af49e09631d);
+        
+    
+        var popup_c424a9be7e22874f94b299b436b8a744 = L.popup({"maxWidth": 300});
+
+        
+            var html_ec74ef67645426f519e5a8d3841c6670 = $(`<div id="html_ec74ef67645426f519e5a8d3841c6670" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>불광제2동</b><br>클러스터: <b>1</b><br>비만율 평균: 55.0%<br>고혈압 신규 이용률: 57.5%<br>당뇨병 신규 이용률: 60.1%</div></div>`)[0];
+            popup_c424a9be7e22874f94b299b436b8a744.setContent(html_ec74ef67645426f519e5a8d3841c6670);
+        
+
+        marker_94d97507b21ffe6dfd7d857ec33c01f9.bindPopup(popup_c424a9be7e22874f94b299b436b8a744)
+        ;
+
+        
+    
+    
+            var marker_4a238044e73bf023fc58abf169b5f7c9 = L.marker(
+                [37.5982, 126.9178],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_a1ad071be29a770029a85eb98e089863 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4a238044e73bf023fc58abf169b5f7c9.setIcon(icon_a1ad071be29a770029a85eb98e089863);
+        
+    
+        var popup_c169b5e825245a1776f336a6557aa2a2 = L.popup({"maxWidth": 300});
+
+        
+            var html_46539a0b5f06cd390f532e9053a08f47 = $(`<div id="html_46539a0b5f06cd390f532e9053a08f47" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>신사제1동</b><br>클러스터: <b>0</b><br>비만율 평균: 50.8%<br>고혈압 신규 이용률: 40.8%<br>당뇨병 신규 이용률: 45.9%</div></div>`)[0];
+            popup_c169b5e825245a1776f336a6557aa2a2.setContent(html_46539a0b5f06cd390f532e9053a08f47);
+        
+
+        marker_4a238044e73bf023fc58abf169b5f7c9.bindPopup(popup_c169b5e825245a1776f336a6557aa2a2)
+        ;
+
+        
+    
+    
+            var marker_9b65e0d692f73dc7db69c4b91edd7826 = L.marker(
+                [37.6026, 126.9129],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_447d3aaef772b823c5b20bd4e4c2f02b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9b65e0d692f73dc7db69c4b91edd7826.setIcon(icon_447d3aaef772b823c5b20bd4e4c2f02b);
+        
+    
+        var popup_d77ed868fdf847041158370276f525b5 = L.popup({"maxWidth": 300});
+
+        
+            var html_1006dcaa844b31012152f4959d3a2b71 = $(`<div id="html_1006dcaa844b31012152f4959d3a2b71" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>신사제2동</b><br>클러스터: <b>2</b><br>비만율 평균: 58.9%<br>고혈압 신규 이용률: 52.9%<br>당뇨병 신규 이용률: 50.5%</div></div>`)[0];
+            popup_d77ed868fdf847041158370276f525b5.setContent(html_1006dcaa844b31012152f4959d3a2b71);
+        
+
+        marker_9b65e0d692f73dc7db69c4b91edd7826.bindPopup(popup_d77ed868fdf847041158370276f525b5)
+        ;
+
+        
+    
+    
+            var marker_0fd8436734ad2cb9219348b6764bed66 = L.marker(
+                [37.6066, 126.9222],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_e01b3633988a9447a8e4020b6d8d0d4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0fd8436734ad2cb9219348b6764bed66.setIcon(icon_e01b3633988a9447a8e4020b6d8d0d4a);
+        
+    
+        var popup_19c22646614559728836b089ca46ad43 = L.popup({"maxWidth": 300});
+
+        
+            var html_30046f57d67f0d8c925a95349a4f35ba = $(`<div id="html_30046f57d67f0d8c925a95349a4f35ba" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>역촌동</b><br>클러스터: <b>2</b><br>비만율 평균: 56.8%<br>고혈압 신규 이용률: 53.6%<br>당뇨병 신규 이용률: 51.8%</div></div>`)[0];
+            popup_19c22646614559728836b089ca46ad43.setContent(html_30046f57d67f0d8c925a95349a4f35ba);
+        
+
+        marker_0fd8436734ad2cb9219348b6764bed66.bindPopup(popup_19c22646614559728836b089ca46ad43)
+        ;
+
+        
+    
+    
+            var marker_1a17ad75852e49eab03ed956a2fae801 = L.marker(
+                [37.5999, 126.9187],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_a620ca9accaf281106bc8014fc408eb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1a17ad75852e49eab03ed956a2fae801.setIcon(icon_a620ca9accaf281106bc8014fc408eb1);
+        
+    
+        var popup_cb22f9e48ea7493fae999bea9ce16987 = L.popup({"maxWidth": 300});
+
+        
+            var html_8f457876799adb29b2d619aa9aab8daf = $(`<div id="html_8f457876799adb29b2d619aa9aab8daf" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>응암제1동</b><br>클러스터: <b>0</b><br>비만율 평균: 50.0%<br>고혈압 신규 이용률: 45.5%<br>당뇨병 신규 이용률: 45.1%</div></div>`)[0];
+            popup_cb22f9e48ea7493fae999bea9ce16987.setContent(html_8f457876799adb29b2d619aa9aab8daf);
+        
+
+        marker_1a17ad75852e49eab03ed956a2fae801.bindPopup(popup_cb22f9e48ea7493fae999bea9ce16987)
+        ;
+
+        
+    
+    
+            var marker_00e532b640d449f92a1d8aff5445ffc7 = L.marker(
+                [37.6344, 126.9184],
+                {}
+            ).addTo(marker_cluster_515e0aea21c1cadfadfe14b1916863ff);
+        
+    
+            var icon_bbd7c5ab4d0bbccc33657e6dc30c03af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_00e532b640d449f92a1d8aff5445ffc7.setIcon(icon_bbd7c5ab4d0bbccc33657e6dc30c03af);
+        
+    
+        var popup_59981b3438fd2773f365da0b3abde190 = L.popup({"maxWidth": 300});
+
+        
+            var html_c3beac2666ad9ae06875425683a682fe = $(`<div id="html_c3beac2666ad9ae06875425683a682fe" style="width: 100.0%; height: 100.0%;"><div style='font-size:14px; width:280px;'><b style='font-size:16px'>진관동</b><br>클러스터: <b>0</b><br>비만율 평균: 22.3%<br>고혈압 신규 이용률: 29.9%<br>당뇨병 신규 이용률: 29.4%</div></div>`)[0];
+            popup_59981b3438fd2773f365da0b3abde190.setContent(html_c3beac2666ad9ae06875425683a682fe);
+        
+
+        marker_00e532b640d449f92a1d8aff5445ffc7.bindPopup(popup_59981b3438fd2773f365da0b3abde190)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ede3a8eb5ab033324ce124d242157d8b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ede3a8eb5ab033324ce124d242157d8b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ede3a8eb5ab033324ce124d242157d8b = L.map(
+                "map_ede3a8eb5ab033324ce124d242157d8b",
+                {
+                    center: [37.615, 126.92],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_41d158d7b9d963c4df59a9034b6fdb6e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_41d158d7b9d963c4df59a9034b6fdb6e.addTo(map_ede3a8eb5ab033324ce124d242157d8b);
+        
+    
+            var marker_cluster_596eb462022a2f546b299eaf5fa84ae9 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_7cb9c80273a16d67446e16acdef42b52 = L.marker(
+                [37.6134, 126.9093],
+                {
+}
+            ).addTo(marker_cluster_596eb462022a2f546b299eaf5fa84ae9);
+        
+    
+            var icon_552723a9ef7666b753ca5de603cd86af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4845fce01aea03a65d9e08d4f36e1403 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f6fd09509ccbe8d1b0f757f4c70b16b = $(`<div id="html_7f6fd09509ccbe8d1b0f757f4c70b16b" style="width: 100.0%; height: 100.0%;">         <div style="width: 280px; font-size: 15px;">             <strong style="font-size: 16px;">구산동</strong><br>             비만 증가율: <b>7.0%</b>         </div>         </div>`)[0];
+                popup_4845fce01aea03a65d9e08d4f36e1403.setContent(html_7f6fd09509ccbe8d1b0f757f4c70b16b);
+            
+        
+
+        marker_7cb9c80273a16d67446e16acdef42b52.bindPopup(popup_4845fce01aea03a65d9e08d4f36e1403)
+        ;
+
+        
+    
+    
+                marker_7cb9c80273a16d67446e16acdef42b52.setIcon(icon_552723a9ef7666b753ca5de603cd86af);
+            
+    
+            var marker_d3a043a94f607bb71b604d0462a0efe4 = L.marker(
+                [37.6101, 126.9313],
+                {
+}
+            ).addTo(marker_cluster_596eb462022a2f546b299eaf5fa84ae9);
+        
+    
+            var icon_bd5ed5a0a3b7619059154a38fa716ddd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_210fb32e5ee6bf1b55fd9ed16eb1bf98 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_13a7e7268d72ebf8732aa86b37e88672 = $(`<div id="html_13a7e7268d72ebf8732aa86b37e88672" style="width: 100.0%; height: 100.0%;">         <div style="width: 280px; font-size: 15px;">             <strong style="font-size: 16px;">불광제1동</strong><br>             비만 증가율: <b>8.4%</b>         </div>         </div>`)[0];
+                popup_210fb32e5ee6bf1b55fd9ed16eb1bf98.setContent(html_13a7e7268d72ebf8732aa86b37e88672);
+            
+        
+
+        marker_d3a043a94f607bb71b604d0462a0efe4.bindPopup(popup_210fb32e5ee6bf1b55fd9ed16eb1bf98)
+        ;
+
+        
+    
+    
+                marker_d3a043a94f607bb71b604d0462a0efe4.setIcon(icon_bd5ed5a0a3b7619059154a38fa716ddd);
+            
+    
+            var marker_17ff8eeb2626449eecca95bbe4361a66 = L.marker(
+                [37.5982, 126.9178],
+                {
+}
+            ).addTo(marker_cluster_596eb462022a2f546b299eaf5fa84ae9);
+        
+    
+            var icon_97b00eb93ee4df04e6add6ee98795a3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f333d83056b8da77f70ae65eb3fe16f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_369ba9125490837a293ae3dd02ff95ed = $(`<div id="html_369ba9125490837a293ae3dd02ff95ed" style="width: 100.0%; height: 100.0%;">         <div style="width: 280px; font-size: 15px;">             <strong style="font-size: 16px;">신사제1동</strong><br>             비만 증가율: <b>8.1%</b>         </div>         </div>`)[0];
+                popup_f333d83056b8da77f70ae65eb3fe16f5.setContent(html_369ba9125490837a293ae3dd02ff95ed);
+            
+        
+
+        marker_17ff8eeb2626449eecca95bbe4361a66.bindPopup(popup_f333d83056b8da77f70ae65eb3fe16f5)
+        ;
+
+        
+    
+    
+                marker_17ff8eeb2626449eecca95bbe4361a66.setIcon(icon_97b00eb93ee4df04e6add6ee98795a3a);
+            
+    
+            var marker_1a8efec1ddad4bfb32a20705f1a8cf1e = L.marker(
+                [37.6026, 126.9129],
+                {
+}
+            ).addTo(marker_cluster_596eb462022a2f546b299eaf5fa84ae9);
+        
+    
+            var icon_841299e9d85a375feea2edc0a7d884fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f4428292fabd73ee8aa6a5887ab069c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1acb06dadc4d782b2da839fc98cc8978 = $(`<div id="html_1acb06dadc4d782b2da839fc98cc8978" style="width: 100.0%; height: 100.0%;">         <div style="width: 280px; font-size: 15px;">             <strong style="font-size: 16px;">신사제2동</strong><br>             비만 증가율: <b>9.6%</b>         </div>         </div>`)[0];
+                popup_6f4428292fabd73ee8aa6a5887ab069c.setContent(html_1acb06dadc4d782b2da839fc98cc8978);
+            
+        
+
+        marker_1a8efec1ddad4bfb32a20705f1a8cf1e.bindPopup(popup_6f4428292fabd73ee8aa6a5887ab069c)
+        ;
+
+        
+    
+    
+                marker_1a8efec1ddad4bfb32a20705f1a8cf1e.setIcon(icon_841299e9d85a375feea2edc0a7d884fc);
+            
+    
+            var marker_32c4ea2e206f88698908df2538f92db0 = L.marker(
+                [37.6344, 126.9184],
+                {
+}
+            ).addTo(marker_cluster_596eb462022a2f546b299eaf5fa84ae9);
+        
+    
+            var icon_380d9bc9a02ce0ea69a33eca15f799d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_afb218c856de95a4931e26008a117a21 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_132b790f29c161e82df936958b961584 = $(`<div id="html_132b790f29c161e82df936958b961584" style="width: 100.0%; height: 100.0%;">         <div style="width: 280px; font-size: 15px;">             <strong style="font-size: 16px;">진관동</strong><br>             비만 증가율: <b>10.1%</b>         </div>         </div>`)[0];
+                popup_afb218c856de95a4931e26008a117a21.setContent(html_132b790f29c161e82df936958b961584);
+            
+        
+
+        marker_32c4ea2e206f88698908df2538f92db0.bindPopup(popup_afb218c856de95a4931e26008a117a21)
+        ;
+
+        
+    
+    
+                marker_32c4ea2e206f88698908df2538f92db0.setIcon(icon_380d9bc9a02ce0ea69a33eca15f799d8);
+            
+    
+            marker_cluster_596eb462022a2f546b299eaf5fa84ae9.addTo(map_ede3a8eb5ab033324ce124d242157d8b);
+        
+</script>
+</html>

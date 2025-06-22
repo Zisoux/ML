@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>은평구 건강지표 분석</title>
+  <style>
+    body { font-family: 'Pretendard', sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #222; }
+    header { background: #4a7fd6; color: white; padding: 2rem 1rem; text-align: center; }
+    section { max-width: 900px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    h2 { color: #4a7fd6; border-left: 5px solid #4a7fd6; padding-left: 10px; }
+    .badge { display: inline-block; background: #e6f0ff; color: #2952a3; padding: 3px 8px; border-radius: 5px; margin-right: 5px; font-size: 0.8rem; }
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>은평구 건강 현황 분석 시스템</h1>
+    <p>AI 기반 건강지표 이상 탐지 · 시계열 예측 · 시각화 · 설명 자동화</p>
+  </header>
+  
+  <section>
+    <h2>🔍 프로젝트 개요</h2>
+    <p>은평구 행정동의 건강지표 데이터를 활용하여 이상치 탐지, 미래 예측, 지도 시각화, 자연어 요약을 통합적으로 수행하는 프로젝트입니다.</p>
+    <div class="badge">Python</div><div class="badge">TensorFlow</div><div class="badge">Folium</div><div class="badge">Scikit-learn</div>
+  </section>
+
+  <section>
+    <h2>📊 분석 기능</h2>
+    <ul>
+      <li><strong>이상치 탐지</strong>: Isolation Forest 기반 건강지표 이상 지역 탐지</li>
+      <li><strong>시계열 예측</strong>: LSTM 기반 다음 연도 비만율 예측</li>
+      <li><strong>지도 시각화</strong>: Folium 기반 행정동 마커 시각화</li>
+      <li><strong>자연어 요약</strong>: "진관동은 최근 3년간 비만율이 10.1% 증가했습니다." 등 자동 생성</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🕵️ 이상치 탐지 결과</h2>
+    <p><a href="이상치탐지결과.png" target="_blank">👉 이상치 탐지 결과 보기</a></p>
+  </section>
+
+  <section>
+    <h2>📍 지도 시연 예시</h2>
+    <p><a href="은평구_비만율_지도.html" target="_blank">👉 비만 증가율 지도 보기</a></p>
+    <p><a href="은평구_건강지표_클러스터_지도.html" target="_blank">👉 클러스터 지도 보기</a></p>
+  </section>
+
+  <section>
+    <h2>📈 주요 결과 요약</h2>
+    <ul>
+        <li>진관동은(는) 최근 3년간 비만율이 과거 대비 10.1% 증가</li>
+        <li>신사제1동은(는) 최근 3년간 비만율이 과거 대비 8.1% 증가</li>
+        <li>신사제2동은(는) 최근 3년간 비만율이 과거 대비 9.6% 증가</li>
+        <li>불광제1동은(는) 최근 3년간 비만율이 과거 대비 8.4% 증가</li>
+        <li>구산동은(는) 최근 3년간 비만율이 과거 대비 7.0% 증가</li>
+        <li>진관동 다음 해 비만율 예측: <strong>약 23.74%</strong></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧠 기술 스택</h2>
+    <p>Python · Jupyter · TensorFlow · Folium · Scikit-learn · Matplotlib · Pandas</p>
+  </section>
+
+  <footer>
+    제작자: 컴퓨터시스템공학과 3-A 홍지수 | 문의: 202345015@itc.ac.kr
+  </footer>
+</body>
+</html>

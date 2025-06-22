@@ -26,7 +26,7 @@ st.markdown("""
         justify-content: center;
     }
     .block-container {
-        max-width: 1000px;
+        max-width: 1100px;
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -264,7 +264,7 @@ with col1:
 # 오른쪽: 잘 보지 않는 채널 정리 서비스
 with col2:
     st.subheader("🗑️ 잘 보지 않는 채널 정리")
-    days = st.slider("잘 보지 않은 채널을 판단할 기준 기간을 선택하세요 (최소 3일, 최대 30일):", 3, 30, 7)
+    days = st.slider("잘 보지 않은 채널을 판단할 기준 기간을 선택하세요 (최소 3일, 최대 30일):", 3, 30, 30)
     unwatched_channels = get_unwatched_channels(days)  # 선택한 날짜를 기준으로 잘 보지 않은 채널 추출
     if unwatched_channels:
         st.markdown("**구독 취소를 추천하는 채널들**:") 
@@ -294,3 +294,34 @@ best_model_name = max(best_scores, key=lambda x: best_scores[x]['Accuracy'])  # 
 best_model = best_models[best_model_name]
 
 print(f"**선택된 모델**: {best_model_name} - 정확도: {best_scores[best_model_name]['Accuracy']:.2f}")
+
+from notion_client import Client
+
+# Notion API 토큰과 데이터베이스 ID 입력
+NOTION_TOKEN = "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"
+NOTION_DATABASE_ID = "21a595aa03a780fabbe3d9f3ecfd9eb5"
+
+notion = Client(auth=NOTION_TOKEN)
+
+def save_recommendations_to_notion(recommendations):
+    for _, row in recommendations.iterrows():
+        notion.pages.create(
+            parent={"database_id": NOTION_DATABASE_ID},
+            properties={
+                "채널명": {"title": [{"text": {"content": row["채널명"]}}]},
+                "채널ID": {"rich_text": [{"text": {"content": row["채널ID"]}}]},
+                "카테고리": {"rich_text": [{"text": {"content": str(row["카테고리"])}}]},
+                "구독자 수": {"number": int(row["구독자 수"])},
+                "영상 수": {"number": int(row["영상 수"])},
+                "최종점수": {"number": float(row["최종점수"])}
+            }
+        )
+
+# 추천 결과를 노션에 저장 (예시: 추천 버튼 클릭 시)
+if user_input:
+    df = load_data()
+    X, vectorizer = vectorize_descriptions(df["설명"])
+    recommendations = hybrid_recommend(df, vectorizer, X, user_input, alpha=alpha, top_n=top_n)
+    # ...기존 추천 코드...
+    # 노션에 저장
+    save_recommendations_to_notion(recommendations)
